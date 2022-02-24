@@ -10,10 +10,6 @@
     border-radius: 50%;
 }
 
-.form-control {
-    padding-left: 3em;
-}
-
 .search-bar {
     width: 90%;
 }
@@ -25,7 +21,6 @@
 
 .wd-profile-img {
     width: 48px;
-    margin-right: 1em;
 }
 
 .wd-username {
