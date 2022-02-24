@@ -1,0 +1,49 @@
+.list-group-item-action {
+    text-decoration: none;
+}
+
+.fa-ellipsis-h {
+    font-size: 0.6em;
+}
+
+.btn-primary {
+    border-radius: 50%;
+}
+
+.form-control {
+    padding-left: 3em;
+}
+
+.search-bar {
+    width: 90%;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    padding: 0.75em;
+}
+
+.wd-profile-img {
+    width: 48px;
+    margin-right: 1em;
+}
+
+.wd-username {
+    font-size: 14px;
+}
+
+.fa-cog {
+    font-size: 26px;
+}
+
+.fa-stack {
+    width: 1em;
+}
+
+.wd-fs-14 {
+    font-size: 14px;
+}
+
+.wd-fs-16 {
+    font-size: 16px;
+}
