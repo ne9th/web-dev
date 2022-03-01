@@ -8,7 +8,7 @@ const NavigationSidebar = () => {
                     <span class="wd-fs-16 d-none d-xl-inline">Home</span>
                 </a>
 
-                <a href="../explore.html" class="list-group-item active list-group-item-action">
+                <a href="" class="list-group-item active list-group-item-action">
                     <i class="fa fa-hashtag"></i>
                     <span class="wd-fs-16 d-none d-xl-inline">Explore</span>
                 </a>
@@ -23,7 +23,7 @@ const NavigationSidebar = () => {
                     <span class="wd-fs-16 d-none d-xl-inline">Messages</span>
                 </a>
 
-                <a href="../bookmark.html" class="list-group-item list-group-item-action">
+                <a href="../bookmarks.html" class="list-group-item list-group-item-action">
                     <i class="fa fa-bookmark"></i>
                     <span class="wd-fs-16 d-none d-xl-inline">Bookmarks</span>
                 </a>
