@@ -4,7 +4,7 @@ import Tuiter from './components/tuiter';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './App.css';
 import './vendors/bootstrap/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free';
+import './vendors/fontawesome/css/all.min.css';
 
 function App() {
   return (

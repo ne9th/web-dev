@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.wd-profile-img {
+  width: 48px;
+}
+
+.search-bar .fa-search {
+  position: absolute;
+  padding: 0.75em;
+}
