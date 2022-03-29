@@ -26,6 +26,7 @@ const tuitsReducer =
       const newTuit = {
         tuit: action.tuit,
         _id: (new Date()).getTime() + '',
+        "avatar-image": "https://cdn.mos.cms.futurecdn.net/2AFSP26rydXuKTuP7qjwbE.jpg",
         postedBy: {
           "username": "ReactJS"
         },
