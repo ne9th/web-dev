@@ -16,8 +16,8 @@ const WhatsHappening = () => {
             <img className="rounded-circle" width="48px" height="48px" src="https://cdn.mos.cms.futurecdn.net/2AFSP26rydXuKTuP7qjwbE.jpg"></img>
         </div>
         <div className="col-11 ps-3">
-            <textarea className="w-100 bg-black text-white ps-2 pt-2" placeholder="What's happening?" value={whatsHappening}
-                    onChange={(event) => setNewTuit({...newTuit, tuit: event.target.value})}>
+            <textarea className="w-100 bg-black text-white ps-2 pt-2" placeholder="What's happening?" 
+                    onChange={(e) => setNewTuit({...newTuit, tuit: e.target.value})}>
             </textarea>
             <div className="row">
                 <div className="col-10 text-primary">
@@ -28,7 +28,7 @@ const WhatsHappening = () => {
                 </div>
                 <div className="col-2">
                     <button className="btn w-100 btn-primary btn-sm rounded-pill" 
-                    onClick={() => {createTuit(dispatch, newTuit)}}>
+                    onClick={() => createTuit(dispatch, newTuit)}>
                         Tuit
                     </button>
                 </div>
