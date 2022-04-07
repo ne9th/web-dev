@@ -6,7 +6,7 @@ const NavigationSidebar = ({
     return(
         <>
             <div className="list-group">
-                <a className="list-group-item" href="/"><i className="fab fa-twitter"></i></a>
+                <a className="list-group-item" href="/home"><i className="fab fa-twitter"></i></a>
                 <a href={"/tuiter"} className={`list-group-item list-group-item-action ${active === 'home' ? 'active' : ''}`}>
                     <i className="fa fa-home"></i>
                     <span className="wd-fs-16 d-none d-xl-inline">  Home</span>
