@@ -6,6 +6,7 @@ import './App.css';
 import './vendors/bootstrap/css/bootstrap.min.css';
 import './vendors/fontawesome/css/all.min.css';
 import HomeScreen from './components/tuiter/home-screen';
+import ExploreComponent from './components/tuiter/explore-screen/ExploreComponent';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
                                    element={<HomeScreen/>}/>
                             <Route path = "home"
                                    element={<HomeScreen/>}/>
+                            <Route path = "explore"
+                                   element={<ExploreComponent/>}/>
                         </Route>
 
                     </Route>

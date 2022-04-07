@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
+import { createTuit } from "../../../services/tuits-service";
 
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState(''); // create whatsHappening state variable
   const dispatch = useDispatch();
-
-  const tuitClickHandler = () => {
-    dispatch({type: 'create-tuit', tuit: whatsHappening });
-  }
+  const [newTuit, setNewTuit] = useState({tuit: 'New Tuit'});
+//   const tuitClickHandler = () => {
+//     dispatch({type: 'create-tuit', tuit: whatsHappening });
+//   }
   return (
     <>
     <div className="row">
@@ -16,7 +17,7 @@ const WhatsHappening = () => {
         </div>
         <div className="col-11 ps-3">
             <textarea className="w-100 bg-black text-white ps-2 pt-2" placeholder="What's happening?" value={whatsHappening}
-                    onChange={(event) => setWhatsHappening(event.target.value)}>
+                    onChange={(event) => setNewTuit({...newTuit, tuit: event.target.value})}>
             </textarea>
             <div className="row">
                 <div className="col-10 text-primary">
@@ -26,8 +27,9 @@ const WhatsHappening = () => {
                     <i className="fa-regular fa-calendar p-2"></i>
                 </div>
                 <div className="col-2">
-                    <button className="btn w-100 btn-primary btn-sm rounded-pill" onClick={tuitClickHandler}>
-                        Tweet
+                    <button className="btn w-100 btn-primary btn-sm rounded-pill" 
+                    onClick={() => {createTuit(dispatch, newTuit)}}>
+                        Tuit
                     </button>
                 </div>
             </div>

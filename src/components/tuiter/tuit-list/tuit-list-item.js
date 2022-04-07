@@ -1,12 +1,13 @@
 import { useDispatch } from "react-redux";
 import TuitStats from "../TuitStats";
+import { deleteTuit } from "../../../services/tuits-service";
 
 const TuitListItem = ({tuit}) => {
     const dispatch = useDispatch();
 
-    const deleteTuit = (tuit) => {
-        dispatch({type: 'delete-tuit', tuit})
-    };
+    // const deleteTuit = (tuit) => {
+    //     dispatch({type: 'delete-tuit', tuit})
+    // };
 
     let attachment = "";
     if (tuit.hasOwnProperty("attachments")) {
@@ -32,7 +33,7 @@ const TuitListItem = ({tuit}) => {
                             <a>{tuit.postedBy.username}<span className="wd-handle ps-1">@{tuit.postedBy.username} - {tuit.time}</span></a>
                         </div>
                         <div className="col-1 align-right">
-                            <a><i onClick={() => deleteTuit(tuit)} className="fas fa-remove a-pull-right"></i></a>
+                            <a><i onClick={() => deleteTuit(dispatch, tuit)} className="fas fa-remove a-pull-right"></i></a>
                         </div>
                     </div>
                     <p>{tuit.tuit}</p>
