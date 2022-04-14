@@ -1,9 +1,37 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import TuitStats from "../TuitStats";
-import { deleteTuit } from "../../../services/tuits-service";
+import { deleteTuit } from "../../../actions/tuits-actions";
 
-const TuitListItem = ({tuit}) => {
+const TuitListItem = (
+    {
+        tuit = {
+            _id: '123',
+            topic: 'Web Development',
+            postedBy: {
+                "username": "ReactJS"
+            },
+            liked: true,
+            verified: false,
+            handle: "ReactJS",
+            time: "2h",
+            title: "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
+            tuit: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            attachments: {
+                video: "unKvMC3Y1kI"
+            },
+            logo_image: "../../../images/react-blue.png",
+            avatar_image: "../../../images/react-blue.png",
+            stats: {
+                comments: 123,
+                retuits: 234,
+                likes: 345
+            }
+        }
+
+}) => {
+    
+    
     const dispatch = useDispatch();
 
     // const deleteTuit = (tuit) => {
@@ -19,10 +47,8 @@ const TuitListItem = ({tuit}) => {
             attachment=tuit.attachments.video;
         }
     }
-
     return (
         <>
-        
         <div className="list-group-item">
             <li className="row d-flex ">
                 <div className="col-1 justify-content-center pe-1">
@@ -41,25 +67,14 @@ const TuitListItem = ({tuit}) => {
                     <div className="card border-1 bg-transparent">
                         <img className="rounded" src={attachment}/>
                     </div>
-                    <div className="row pt-3">
-                        <div className="col-3">
-                            <a ><i className="wd-icon fa-regular fa-comment"></i>{tuit.stats.comments}</a>
-                        </div>
-                        <div className="col-3">
-                            <a ><i className="wd-icon fa-solid fa-retweet"></i><span class="wd-action-num">{tuit.stats.retuits}</span></a>
-                        </div>
-                        <div className="col-3">
-                            <a ><TuitStats tuit={tuit}/></a>
-                        </div>
-                        <div className="col-3">
-                            <a ><i className="wd-icon fa-solid fa-arrow-up-from-bracket"></i></a>
-                        </div>
-                        
+                    <div className="pt-1">
+                        <TuitStats tuit={tuit}/>
                     </div>
                 </div>
             </li>
         </div>
         </>
+        
     )
 
 

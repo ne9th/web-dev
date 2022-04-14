@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import { useDispatch } from "react-redux";
-import { createTuit } from "../../../services/tuits-service";
+import { createTuit } from "../../../actions/tuits-actions";
 
 const WhatsHappening = () => {
-  let [whatsHappening, setWhatsHappening] = useState(''); // create whatsHappening state variable
+//   let [whatsHappening, setWhatsHappening] = useState(''); // create whatsHappening state variable
   const dispatch = useDispatch();
   const [newTuit, setNewTuit] = useState({tuit: 'New Tuit'});
 //   const tuitClickHandler = () => {

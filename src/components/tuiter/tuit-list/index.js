@@ -10,27 +10,28 @@ const TuitList = () => {
   // const [newTuit, setNewTuit] = useState({tuit: 'New tuit'});
   const tuits = useSelector(state => state.tuits);
   const dispatch = useDispatch();
-  useEffect(() => findAllTuits(dispatch), [dispatch]);
+  useEffect(() => findAllTuits(dispatch), []);
+  // console.log(tuits);
+  // console.log(JSON.stringify(tuits));
   return (
-    <>
+    // <>
       <ul className="ttr-tuits list-group">
         {
-          tuits.map && tuits.map(tuit => {
+          tuits.map && tuits.map(tuit => 
             <div className="row">
-              <div className="col-11">
+              <div className="col-12">
                 <TuitListItem key={tuit._id} tuit={tuit}/>
               </div>
-              <div className="col-1">
-              <i className="fas fa-remove float-end" 
-              onClick={() => deleteTuit(dispatch, tuit)}></i>
-              </div>
+              {/* <div className="col-1">
+                <i className="fas fa-remove float-end" 
+                onClick={() => deleteTuit(dispatch, tuit)}></i>
+              </div>  */}
               
             </div>
-            
-    })
+          )
         }
       </ul>
-    </>
+    // </>
   );
 }
 
