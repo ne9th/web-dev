@@ -8,9 +8,7 @@ const TuitListItem = (
         tuit = {
             _id: '123',
             topic: 'Web Development',
-            postedBy: {
-                "username": "ReactJS"
-            },
+            username: "ReactJS",
             liked: true,
             verified: false,
             handle: "ReactJS",
@@ -22,11 +20,9 @@ const TuitListItem = (
             },
             logo_image: "../../../images/react-blue.png",
             avatar_image: "../../../images/react-blue.png",
-            stats: {
-                comments: 123,
-                retuits: 234,
-                likes: 345
-            }
+            comments: 123,
+            retuits: 234,
+            likes: 345,
         }
 
 }) => {
@@ -57,7 +53,7 @@ const TuitListItem = (
                 <div className="col-11 ps-4">
                     <div className="row">
                         <div className="col-11">
-                            <a>{tuit.postedBy.username}<span className="wd-handle ps-1">@{tuit.postedBy.username} - {tuit.time}</span></a>
+                            <a>{tuit.username}<span className="wd-handle ps-1">@{tuit.username} - {tuit.time}</span></a>
                         </div>
                         <div className="col-1 align-right">
                             <a><i onClick={() => deleteTuit(dispatch, tuit)} className="fas fa-remove a-pull-right"></i></a>
